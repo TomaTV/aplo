@@ -4,7 +4,7 @@ import React from "react";
 import { useState } from "react";
 import Toolbar from "@/app/components/editor/Toolbar";
 import Sidebar from "@/app/components/layout/Sidebar";
-import Canvas from "@/app/components/editor/Canvas"; // Import direct du Canvas
+import Canvas from "@/app/components/editor/CanvasManager"; // Import direct du Canvas
 
 export default function RootLayout({ children }) {
   const [tool, setTool] = useState("pencil");

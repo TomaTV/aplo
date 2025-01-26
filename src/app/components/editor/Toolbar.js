@@ -1,7 +1,6 @@
 "use client";
-import { useState } from "react";
-import React from "react";
-import { Pencil, Paintbrush, Eraser, Text } from "lucide-react";
+import React, { useRef, useEffect, useState } from "react";
+import { Pencil, Eraser, Text, Circle, Square, ArrowRight } from "lucide-react";
 
 export default function Toolbar({ tool, onToolChange }) {
   const handleToolClick = (selectedTool) => {
@@ -26,6 +25,38 @@ export default function Toolbar({ tool, onToolChange }) {
         onClick={() => handleToolClick("eraser")}
       >
         <Eraser size={20} />
+      </button>
+      <button
+        className={`p-2 rounded-full ${
+          tool === "text" ? "bg-gray-200" : "hover:bg-gray-100"
+        } focus:outline-none`}
+        onClick={() => handleToolClick("text")}
+      >
+        <Text size={20} />
+      </button>
+      <button
+        className={`p-2 rounded-full ${
+          tool === "circle" ? "bg-gray-200" : "hover:bg-gray-100"
+        } focus:outline-none`}
+        onClick={() => handleToolClick("circle")}
+      >
+        <Circle size={20} />
+      </button>
+      <button
+        className={`p-2 rounded-full ${
+          tool === "square" ? "bg-gray-200" : "hover:bg-gray-100"
+        } focus:outline-none`}
+        onClick={() => handleToolClick("square")}
+      >
+        <Square size={20} />
+      </button>
+      <button
+        className={`p-2 rounded-full ${
+          tool === "arrow" ? "bg-gray-200" : "hover:bg-gray-100"
+        } focus:outline-none`}
+        onClick={() => handleToolClick("arrow")}
+      >
+        <ArrowRight size={20} />
       </button>
     </div>
   );

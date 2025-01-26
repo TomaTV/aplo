@@ -1,4 +1,4 @@
-import Canvas from "@/app/components/editor/Canvas";
+import Canvas from "@/app/components/editor/CanvasManager";
 
 export default function Home({ tool }) {
   return (
