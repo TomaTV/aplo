@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-dotted-paper {
+    background-image: radial-gradient(#ddd 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-color: #fff;
+  }
+
+  canvas.eraser {
+    cursor: crosshair;
+  }
